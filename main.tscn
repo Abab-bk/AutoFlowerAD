@@ -1,0 +1,84 @@
+[gd_scene load_steps=2 format=3 uid="uid://ba1cf01xrk0hj"]
+
+[ext_resource type="Script" path="res://addons/autopocketad/main.gd" id="1_afdjd"]
+
+[node name="Main" type="Control"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_afdjd")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBox" type="HBoxContainer" parent="Panel"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Margin" type="MarginContainer" parent="Panel/HBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBox" type="VBoxContainer" parent="Panel/HBox/Margin"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 5
+
+[node name="SDKPath" type="LineEdit" parent="Panel/HBox/Margin/VBox"]
+layout_mode = 2
+placeholder_text = "请输入插件源码绝对路径"
+
+[node name="AppID" type="LineEdit" parent="Panel/HBox/Margin/VBox"]
+layout_mode = 2
+placeholder_text = "请输入口袋工厂APPID"
+
+[node name="Path" type="LineEdit" parent="Panel/HBox/Margin/VBox"]
+layout_mode = 2
+placeholder_text = "请输入渠道（taptap或者别的随便填）"
+
+[node name="Start" type="Button" parent="Panel/HBox/Margin/VBox"]
+layout_mode = 2
+text = "开始配置"
+
+[node name="Margin2" type="MarginContainer" parent="Panel/HBox"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBox" type="VBoxContainer" parent="Panel/HBox/Margin2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/HBox/Margin2/VBox"]
+layout_mode = 2
+text = "使用前请先安装安卓构建模板（项目 -> 安装Android构建模板）"
+
+[node name="Scroll" type="ScrollContainer" parent="Panel/HBox/Margin2/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="log" type="Label" parent="Panel/HBox/Margin2/VBox/Scroll"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+text = "log：1"
