@@ -5,7 +5,7 @@
 2. 安装了AndroidStudio且Godot的安卓导出正常  
 
 > 广告插件仅支持安卓平台导出  
-> 如果你使用Windows7，有可能出现问题
+> 如果您使用Windows 7，有可能出现问题
 
 ## 快速开始
 
@@ -23,7 +23,8 @@
 
 ## 注意事项  
 
-本插件会自动加载一个autoload，如果你取消了插件勾选，autoload也会删除，你需要自己添加：  
+本插件会自动加载一个autoload。  
+如果取消了插件勾选，autoload也会删除，您需要自己添加：  
 
 ``` res://addons/autopocketad/FlowerAD.gd ```
 
